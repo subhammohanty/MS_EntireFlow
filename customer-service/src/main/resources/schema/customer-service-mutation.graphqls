@@ -1,0 +1,25 @@
+type Mutation{
+		createCustomer(customerId: String, firstName: String, lastName: String, emailId: String, phoneNo: String, 
+				creationDate: String, address: AddressRequest, subscription: SubscriptonRequest): CustomerCreated
+}
+
+input AddressRequest{
+	 addressId: Int
+	 address1: String
+	 address2: String
+	 city: String
+	 state: String
+	 postalCode: String
+	 lastUpdatedDate: String
+}
+
+input SubscriptonRequest{
+	subscriptionId: Int
+	subscriptionOnDate: String
+	subscriptionOffDate: String
+	balancePending: Int
+}
+
+type CustomerCreated{
+	customerId : String
+}

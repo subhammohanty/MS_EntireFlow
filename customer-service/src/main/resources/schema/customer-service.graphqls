@@ -1,0 +1,34 @@
+type Query{
+	getAllCustomers : [Customer]
+	getCustomerById(customerId: String): Customer
+	getFirstNCustomer(limit: Int): [Customer]
+}
+
+type Customer{
+	customerId: String
+	firstName: String
+	lastName: String
+	emailId: String
+	phoneNo: String
+	creationDate: String	
+	address: Address
+	subscription: Subscripton
+}
+
+type Address{
+	addressId: Int
+	address1: String
+	address2: String
+	city: String
+	state: String
+	postalCode: String
+	lastUpdatedDate: String
+}
+
+type Subscripton{
+	subscriptionId: Int
+	subscriptionOnDate: String
+	subscriptionOffDate: String
+	balancePending: String
+
+}
